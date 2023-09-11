@@ -1,6 +1,8 @@
 package app.battleship.sim;
 
+import app.battleship.sim.Game.Game;
 import app.battleship.sim.Grid.Grid;
+import app.battleship.sim.Player.Player;
 import app.battleship.sim.Position.Position;
 
 public class BattleshipApplication {
@@ -48,12 +50,16 @@ public class BattleshipApplication {
 
         Position[] playerTwoTargets = {position1, position2, position3, position4, position5};
 
-        Grid newGrid = new Grid(M);
-        int[][] gridIns = newGrid.getGrid();
-        for(int i = 0; i < gridIns.length; i++){
-            for(int j = 0; j < gridIns[i].length; j++){
-                System.out.println(gridIns[i][j]);
-            }
-        }
+        Player player1 = new Player(M, S, T, playerOneShipPos, playerOneTargets);
+
+        Player player2 = new Player(M, S, T, playerTwoShipPos, playerTwoTargets);
+
+        Game game = new Game();
+        game.playGame(player1, player2);
+        game.printGameResult(player1, player2);
+
+//        Grid newGrid = new Grid(M);
+//        char[][] gridIns = newGrid.getGrid();
+//
     }
 }
