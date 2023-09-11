@@ -27,15 +27,21 @@ The input for the game will be read from a file which contains the following (nu
 represent line numbers in input file)
 
 1. Contains the size of the battleground ‘M’
+
    ○ (0 < M < 10 )
-2. Contains the number of ships ’S’ which can be placed on the M*M grid
+   
+3. Contains the number of ships ’S’ which can be placed on the M*M grid
+
    ○ ( 0 < S <= M^2/2)
-3. Player 1 ship positions in the grid, position represented by x1,y1:x2,y2 and so on
-4. Player 2 ship positions, they are placed in the grid with the same format as above
-5. Tells the total number of missiles players have
+   
+5. Player 1 ship positions in the grid, position represented by x1,y1:x2,y2 and so on
+6. Player 2 ship positions, they are placed in the grid with the same format as above
+7. Tells the total number of missiles players have
+
    ○ (0 < T < 100)
-6. Player 1 missile targets, represented by x1,y1:x2,y2 and so on
-7. Player 2 missile targets, represented with the same format as above
+   
+9. Player 1 missile targets, represented by x1,y1:x2,y2 and so on
+10. Player 2 missile targets, represented with the same format as above
    A Player's moves will be a colon separated list of target positions (x, y) of missile attacks on the
    enemy grid.
 
