@@ -1,16 +1,14 @@
 package app.battleship.sim;
 
 import app.battleship.sim.Game.Game;
-import app.battleship.sim.Grid.Grid;
 import app.battleship.sim.Player.Player;
 import app.battleship.sim.Position.Position;
 
 public class BattleshipApplication {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
         int M = 5, S = 5;
 
-        //1,1:2,0:2,3:3,4:4,3
+        //1,1 : 2,0 : 2,3 : 3,4 : 4,3
         Position position1 = new Position(1, 1);
         Position position2 = new Position(2, 0);
         Position position3 = new Position(2,3);
@@ -20,7 +18,7 @@ public class BattleshipApplication {
         //Position[] playerOneShipPos = new Position[S];
         Position[] playerOneShipPos = {position1, position2, position3, position4, position5};
 
-        //0,1:2,3:3,0:3,4:4,1
+        //0,1 : 2,3 : 3,0 : 3,4 : 4,1
         position1 = new Position(0, 1);
         position2 = new Position(2, 3);
         position3 = new Position(3, 0);
@@ -32,7 +30,7 @@ public class BattleshipApplication {
 
         int T = 5;
 
-        //0,1:4,3:2,3:3,1:4,1
+        //0,1 : 4,3 : 2,3 : 3,1 : 4,1
         position1 = new Position(0, 1);
         position2 = new Position(4, 3);
         position3 = new Position(2, 3);
@@ -41,7 +39,7 @@ public class BattleshipApplication {
 
         Position[] playerOneTargets = {position1, position2, position3, position4, position5};
 
-        //0,1:0,0:1,1:2,3:4,3
+        //0,1 : 0,0 : 1,1 : 2,3 : 4,3
         position1 = new Position(0, 1);
         position2 = new Position(0, 0);
         position3 = new Position(1, 1);
@@ -58,8 +56,5 @@ public class BattleshipApplication {
         game.playGame(player1, player2);
         game.printGameResult(player1, player2);
 
-//        Grid newGrid = new Grid(M);
-//        char[][] gridIns = newGrid.getGrid();
-//
     }
 }

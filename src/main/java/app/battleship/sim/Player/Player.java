@@ -19,10 +19,10 @@ public class Player {
         this.shipPositions = shipPositions;
         this.missilePositions = missilePositions;
         grid = new Grid(gridSize);
+        grid.initialiseWithShips(this.shipPositions);
     }
 
     public char[][] getGrid(){
-        grid.initialiseWithShips(shipPositions);
         return grid.getGrid();
     }
 
